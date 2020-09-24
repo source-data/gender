@@ -1,0 +1,2 @@
+# requirements for genderize
+genderize==0.2.0

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    </head>
+
+<body>
+
+    <div class='container-fluid'>
+        <div class='panel panel-heading col-lg-6 col-lg-offset-3 maintitle'>
+                <h1 class='align-middle'>Process eJP referee reports through <a href = 'https://genderize.io/' target = 'blank'><em>'genderize'</em></a></h1>
+        </div>
+
+        <nav class="navbar navbar-default navbar-fixed-top" id='navbar-nav'>
+            <div class='container-fluid pull-right' id='navbar'>
+                <ul class="nav navbar-nav">
+                <li><a href= "{{url_for('about')}}">About</a></li>
+                <li><a href="https://github.com/source-data/gender" target="blank">GitHub</a></li>
+                <li><a href="mailto:eva.benito@embo.org">Contact</a></li>
+                </ul>
+            </div>
+        </nav>        
+    </div>
+
+    <hr size = '3'>
+
+    <div class='container-fluid'>
+        <div class='row'>
+            <div class='col-lg-4 col-lg-offset-4 mainpanel'>
+                <form action="/upload" method='POST' enctype='multipart/form-data'>
+                    <div class="form-group">
+                        <label>Uplod your eJP referee report here. <br> <small>The output file will be automatically downloaded</small></label>
+                            <div class="input-group input-file" name='eJP_txt_file'>
+                                <span class="input-group-btn">
+                                    <button class="choose-btn btn btn-default btn-choose" type="button">Choose</button>
+                                </span>
+                                <input type="text" class="form-control" placeholder='Choose a file...' />
+                                <span class="input-group-btn">
+                                    <button class="reset-button btn btn-warning btn-reset" type="button">Reset</button>
+                                </span>
+                            </div>
+                        </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='choose_file.js') }}"></script>
+</body>
+</html>
+
+    

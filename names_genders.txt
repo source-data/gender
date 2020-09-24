@@ -1,0 +1,16 @@
+name	gender	probability	count
+Eva-Maria	female	1.0	6
+Jurgen	male	0.97	36
+Karen	female	1.0	5462
+Stephen	male	1.0	2608
+Ramanujan	None
+Alfred	male	1.0	230
+Helene	female	1.0	255
+Silvio	male	1.0	183
+Junmin	male	1.0	2
+Mark	male	1.0	6176
+Henning	male	1.0	77
+Ted	male	1.0	376
+Olga	female	1.0	898
+Mala	female	0.97	33
+Thilo	male	1.0	11
